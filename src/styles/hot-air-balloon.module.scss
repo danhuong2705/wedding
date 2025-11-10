@@ -20,7 +20,7 @@ position: absolute;
   animation-timing-function: linear;
   
   /* 2. Thêm 'animation-fill-mode' vào đây */
-  animation-fill-mode: both; 
+  animation-fill-mode: forwards; 
 
   will-change: transform, opacity;
 

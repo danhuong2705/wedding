@@ -39,7 +39,7 @@ interface ActiveBalloon {
 }
 
 const NUM_BALLOONS = 7;
-const MIN_SEPARATION_PERCENT = 30;
+const MIN_SEPARATION_PERCENT = 20;
 
 const ADecadeOfUs: React.FC = () => {
   // State (giữ nguyên)
@@ -55,8 +55,12 @@ const ADecadeOfUs: React.FC = () => {
 
   // --- Logic tạo Balloon ---
   const createRandomBalloon = useCallback(
-    (existingBalloons: ActiveBalloon[]): ActiveBalloon => {
-      // Logic tìm vị trí 'left' (giữ nguyên)
+    (
+      existingBalloons: ActiveBalloon[],
+      isInitial: boolean = false // Thêm flag, mặc định là 'false'
+    ): ActiveBalloon => {
+
+      // ... (Logic tìm 'left', milestone, graphicUrl giữ nguyên)
       let newLeft: number;
       let isTooClose: boolean;
       let attempts = 0;
@@ -71,15 +75,9 @@ const ADecadeOfUs: React.FC = () => {
         }
         attempts++;
       } while (isTooClose && attempts < 10);
-
-      // Logic lấy milestone (giữ nguyên)
-      // Quan trọng: Vì 'nextMilestoneIndex' là 'useRef',
-      // nó không bị "stale" và không cần đưa vào dependency array
       const milestone = shuffledMilestones[nextMilestoneIndex.current];
       nextMilestoneIndex.current =
         (nextMilestoneIndex.current + 1) % shuffledMilestones.length;
-
-      // Logic lấy ảnh (giữ nguyên)
       const randomGraphicUrl = shuffledGraphics[nextGraphicIndex.current];
       nextGraphicIndex.current =
         (nextGraphicIndex.current + 1) % shuffledGraphics.length;
@@ -90,34 +88,43 @@ const ADecadeOfUs: React.FC = () => {
         left: newLeft,
         duration: Math.random() * 8 + 12,
         size: Math.random() * 0.4 + 0.8,
-        delay: Math.random() * -8,
+
+        // -------------------------------------------
+        // CẬP NHẬT QUAN TRỌNG:
+        // Nếu là 'ban đầu' (isInitial) thì delay (0-5s)
+        // Nếu là 'thay thế' thì delay 0
+        // -------------------------------------------
+        delay: isInitial ? Math.random() * 5 : 0,
+
         graphicUrl: randomGraphicUrl,
       };
     },
-    [shuffledGraphics, shuffledMilestones] // Dependency array
-    // Hàm này chỉ được tạo lại NẾU 2 mảng này thay đổi (chỉ 1 lần)
+    [shuffledGraphics, shuffledMilestones]
   );
 
   // --- useEffect (giữ nguyên) ---
   useEffect(() => {
     if (shuffledMilestones.length === 0 || shuffledGraphics.length === 0) return;
-
     const initialBalloons: ActiveBalloon[] = [];
+
     for (let i = 0; i < NUM_BALLOONS; i++) {
-      const newBalloon = createRandomBalloon(initialBalloons);
+      // -------------------------------------------
+      // CẬP NHẬT: Truyền 'true' cho các balloon ban đầu
+      // -------------------------------------------
+      const newBalloon = createRandomBalloon(initialBalloons, true);
       initialBalloons.push(newBalloon);
     }
     setActiveBalloons(initialBalloons);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shuffledMilestones, shuffledGraphics, createRandomBalloon]);
 
   const handleAnimationEnd = useCallback(
     (id: number) => {
-      // 3. Thay thế setTimeout bằng startTransition
-      // Báo React: "Cập nhật state này, nhưng ưu tiên giữ animation mượt mà"
       startTransition(() => {
         setActiveBalloons((currentBalloons) => {
           const remainingBalloons = currentBalloons.filter((b) => b.id !== id);
+          // -------------------------------------------
+          // CẬP NHẬT: Không truyền gì (isInitial sẽ là false)
+          // -------------------------------------------
           const newBalloon = createRandomBalloon(remainingBalloons);
           return [...remainingBalloons, newBalloon];
         });

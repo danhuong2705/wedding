@@ -1,0 +1,76 @@
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  // background-color: #5e769c;
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin: 80px 0;
+  font-family: "Dancing Script", cursive;
+  padding-bottom: 80px;
+  position: sticky;
+  top: 0;
+  box-shadow: -2px -2px 10px #b3afaf;
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    font-size: 34px;
+    color: #f0afd9;
+
+    .imageWrapper {
+      position: relative;
+
+      .arrow,
+      .secondArrow {
+        position: absolute;
+        width: 100px;
+        height: auto;
+
+      }
+
+      .arrow {
+        top: 120px;
+        left: -86px;
+        transform: rotate(40deg);
+      }
+
+      .secondArrow {
+        transform: rotate(108deg);
+        bottom: 79px;
+        right: -84px;
+      }
+
+      .mainPhoto {
+        max-height: 66vh;
+        max-width: 70vw;
+
+      }
+
+      .paperClip {
+        position: absolute;
+        right: 10px;
+        top: -23px;
+        width: 60px;
+        transform: rotate(15deg);
+      }
+
+      .textOverlay {
+        position: absolute;
+        right: -140px;
+        font-size: 48px;
+        .married {
+          margin-left: -20px;
+        }
+      }
+
+    }
+  }
+
+}

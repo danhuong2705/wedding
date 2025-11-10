@@ -1,0 +1,85 @@
+.container {
+  transition: display 0.5s ease-in-out;
+  height: 100vh;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  .pinkBow {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+    transform: rotate(15deg);
+  }
+
+  .pinkBowSecond {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    /* transform: rotate(15deg); */
+    transform: rotate(195deg);
+
+  }
+
+  .blueBow {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transform: rotate(335deg);
+  }
+
+  .blueBowSecond {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    /* transform: rotate(335deg); */
+    transform: rotate(155deg);
+  }
+
+  img {
+    width: 130px;
+    height: auto;
+  }
+
+  .saveTheDate {
+    color: #5e769c;
+  }
+
+  .names {
+    font-size: 80px;
+    margin-top: 8px;
+
+    .and {
+      font-size: 40px;
+      margin: 0 16px;
+      color: #5e769c;
+    }
+
+    .brideName {
+      color: #f0afd9;
+    }
+
+    .groomName {
+      color: #90caf9;
+    }
+
+
+  }
+
+  .date {
+    margin-top: 8px;
+    color: #5e769c;
+    font-size: 24px;
+
+  }
+
+
+
+}

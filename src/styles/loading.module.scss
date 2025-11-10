@@ -1,0 +1,46 @@
+.loading-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.heart-progress-container {
+  position: relative;
+  width: 200px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-svg {
+  width: 100px;
+  height: 90px;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Path nền (màu xám) */
+.heart-path-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 10;
+}
+
+/* Path fill (màu hồng) */
+.heart-path-fill {
+  fill: none;
+  stroke: hotpink;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.heart-text {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: hotpink;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}

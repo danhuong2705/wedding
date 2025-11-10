@@ -1,0 +1,75 @@
+@keyframes flyUp {
+  from {
+    transform: translateY(150vh) translateZ(0); // Thêm translateZ
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh) translateZ(0); // Thêm translateZ
+    opacity: 0.8;
+  }
+}
+.balloonWrapper {
+position: absolute;
+  bottom: 0;
+  
+  /* 1. Đặt animation-name và các thuộc tính tĩnh ở đây */
+  animation-name: flyUp;
+  animation-timing-function: linear;
+  
+  /* 2. Thêm 'animation-fill-mode' vào đây */
+  animation-fill-mode: both; 
+
+  will-change: transform, opacity;
+
+  /*
+    3. Đặt style mặc định (GIỐNG HỆT 'from')
+    và thêm "mẹo" translateZ(0) để kích hoạt hardware acceleration
+  */
+  opacity: 0;
+  transform: translateY(150vh) translateZ(0);
+}
+
+.balloon {
+  position: relative;
+  width: 200px; 
+  height: auto;
+  transform-origin: bottom center;
+
+  .balloonGraphic {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+
+  .milestonePhoto {
+    position: absolute;
+    top: 6.5%;
+    left: 11%;
+    width: 78%;
+    height: 52%;
+    object-fit: cover;
+    border-radius: 50% / 55%; 
+    z-index: 1; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .yearTag {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; 
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+}

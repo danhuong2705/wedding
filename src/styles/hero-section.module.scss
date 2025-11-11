@@ -1,15 +1,16 @@
 .container {
   transition: display 0.5s ease-in-out;
-  height: 100vh;
-  font-family: "Dancing Script", cursive;
+  min-height: 100vh;
+  font-family: var(--elegant-font);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 48px;
   width: 100%;
-  position: sticky;
-  top: 0;
+  position: relative;
+  z-index: 0;
+ background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
   .pinkBow {
     position: absolute;
     top: 10px;
@@ -49,7 +50,7 @@
   }
 
   .saveTheDate {
-    color: #5e769c;
+    color: var(--text-color);
   }
 
   .names {
@@ -59,7 +60,7 @@
     .and {
       font-size: 40px;
       margin: 0 16px;
-      color: #5e769c;
+      color: var(--text-color);
     }
 
     .brideName {
@@ -67,7 +68,7 @@
     }
 
     .groomName {
-      color: #90caf9;
+      color: var(--blue-color);
     }
 
 
@@ -75,7 +76,7 @@
 
   .date {
     margin-top: 8px;
-    color: #5e769c;
+    color: var(--text-color);
     font-size: 24px;
 
   }

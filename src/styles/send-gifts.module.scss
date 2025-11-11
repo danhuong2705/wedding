@@ -1,0 +1,205 @@
+/* --- Biến màu & phông chữ --- */
+
+
+/* --- Section tổng thể --- */
+.giftsSection {
+  text-align: center;
+  padding: 80px 0;
+  min-height: 100vh;
+  ;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+ background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
+
+}
+
+.sectionTitle {
+  font-family: var(--elegant-font);
+  font-size: 56px;
+  color: var(--text-color);
+    margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; // Khoảng cách giữa icon và chữ
+
+  img {
+    width: 50px;
+    height: 50px;
+
+  }
+}
+
+.titleIcon {
+  width: 50px; // Kích thước icon hộp quà
+  height: 50px;
+  min-width: 50px;
+}
+
+.sectionDescription {
+  font-family: var(--simple-font);
+  font-size: 1rem;
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+
+}
+
+/* --- Container 2 cột --- */
+.giftsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; // Đảm bảo các khối cao bằng nhau
+  gap: 6rem; // Khoảng cách giữa 2 cột
+  width: 100%;
+}
+
+/* --- Style cho mỗi khối (Cô Dâu / Chú Rể) --- */
+.giftBlock {
+  // flex: 1; // Mỗi khối chiếm 50%
+  font-family: var(--simple-font);
+  color: var(--text-color);
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); // Bóng đổ nổi bật hơn
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* --- Áp dụng màu chủ đạo --- */
+.pinkTheme {
+  border: 1px solid var(--pink-color);
+
+  .personName {
+    color: var(--pink-color);
+  }
+
+  .copyButton {
+    background-color: var(--pink-color);
+
+    &:hover {
+      background-color: var(--hover-pink-color);
+    }
+  }
+}
+
+.blueTheme {
+  border: 1px solid var(--blue-color);
+
+  .personName {
+    color: var(--blue-color); // Màu đậm hơn một chút cho tên
+  }
+
+  .copyButton {
+    background-color: var(--blue-color);
+
+    &:hover {
+      background-color: var(--hover-blue-color);
+    }
+  }
+}
+
+/* --- Các chi tiết bên trong --- */
+.personName {
+  font-family: var(--elegant-font);
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.qrCode {
+  width: 180px; // Kích thước QR code
+  height: 180px;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid #fff; // Viền trắng cho QR code
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bankInfo {
+  margin-bottom: 1.5rem;
+
+  p {
+    // margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  strong {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+}
+
+.copyButton {
+  font-family: var(--simple-font);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.8rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .titleIcon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .sectionDescription {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .giftsContainer {
+    flex-direction: column; // Chuyển thành 1 cột
+    gap: 1.5rem;
+  }
+
+  .giftBlock {
+    padding: 2rem 1rem;
+  }
+
+  .personName {
+    font-size: 2rem;
+  }
+
+  .qrCode {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bankInfo p {
+    font-size: 0.9rem;
+  }
+}

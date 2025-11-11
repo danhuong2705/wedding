@@ -1,0 +1,82 @@
+
+
+.wrapper {
+  text-align: center;
+  min-height: 100vh;
+  ;
+  top: 0;
+  background-color: #fff;
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:16px;
+  align-items: center;
+  .title {
+    font-size: 56px;
+    color:var(--text-color);
+  font-family: var(--elegant-font);
+  
+  }
+}
+/* --- Style cho Countdown --- */
+.countdownContainer {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; // Khoảng cách giữa các khối
+
+
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px; // Đảm bảo các khối có chiều rộng tối thiểu
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.number {
+  font-family: var(--elegant-font);
+  font-size: 4rem; // Kích thước lớn cho số
+  font-weight: 700;
+  line-height: 1.1;
+  
+  // Hiệu ứng đổ bóng nhẹ cho lãng mạn
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  letter-spacing: 1.5px; // Giãn cách chữ
+  margin-top: 0.5rem;
+  font-family: var(--simple-font);
+}
+
+/* --- Áp dụng màu xen kẽ --- */
+.pink .number {
+  color: var(--pink-color);
+}
+
+.blue .number {
+  color: var(--blue-color);
+}
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 768px) {
+  .countdownContainer {
+    gap: 1rem;
+  }
+
+  .number {
+    font-size: 3rem;
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+}

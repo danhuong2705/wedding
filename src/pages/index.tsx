@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 
+import ADecadeOfUs from "@/components/ADecadeOfUs";
+import Guestbook from "@/components/GuestBooks";
 import HeroSection from "@/components/HeroSection";
 import Loading from "@/components/Loading";
+import RsvpSection from "@/components/RSVP";
+import SendGifts from "@/components/SendGifts";
 import ThisIsUs from "@/components/ThisIsUs";
-import ADecadeOfUs from "@/components/ADecadeOfUs";
+import WeddingEvent from "@/components/WeddingEvents";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -109,7 +113,7 @@ const HomePage = () => {
   };
   return (
     <div className="content">
-      <div id="heart-container"></div>
+
       {isLoading ?
         <Loading setLoading={setIsLoading} />
         :
@@ -117,6 +121,10 @@ const HomePage = () => {
           <HeroSection />
           <ThisIsUs />
           <ADecadeOfUs />
+          <WeddingEvent />
+          <Guestbook />
+          <RsvpSection />
+          <SendGifts />
         </>}
     </div>
 

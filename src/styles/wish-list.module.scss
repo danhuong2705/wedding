@@ -1,0 +1,128 @@
+/* --- Biến màu & phông chữ --- */
+$elegant-font: 'Dancing Script', cursive;
+$simple-font: 'Montserrat', sans-serif;
+$text-color: #555;
+$darker-text: #444;
+/* --- Biến màu & phông chữ (Giữ nguyên) --- */
+
+/* --- THAY ĐỔI: Layout Pinterest --- */
+.wishListContainer {
+  width: 100%;
+  margin-top: 3rem;
+  column-gap: 1.5rem;
+  padding: 0 1rem; // Thêm lề trái/phải
+  box-sizing: border-box;
+
+  /* 1. Mặc định là 1 cột (Mobile First) */
+  column-count: 1;
+}
+
+/* 2. 2 cột cho màn hình > 576px (Điện thoại ngang) */
+@media (min-width: 576px) {
+  .wishListContainer {
+    column-count: 2;
+  }
+}
+
+/* 3. 3 cột cho màn hình > 768px (Tablet) */
+@media (min-width: 768px) {
+  .wishListContainer {
+    column-count: 3;
+  }
+}
+
+/* 4. 4 cột cho màn hình > 992px (Desktop nhỏ) */
+@media (min-width: 992px) {
+  .wishListContainer {
+    column-count: 4;
+  }
+}
+
+/* 5. 5 cột cho màn hình > 1200px (Desktop lớn) */
+@media (min-width: 1200px) {
+  .wishListContainer {
+    column-count: 5;
+  }
+}
+.myMasonryGrid {
+  display: flex;
+  margin-left: -1.5rem; /* Bù trừ cho padding của cột */
+  width: auto;
+  margin-top: 3rem;
+}
+
+.myMasonryGrid_column {
+  padding-left: 1.5rem; /* Đây là khoảng cách giữa các cột */
+  background-clip: padding-box;
+}
+/* --- Style "Tờ Note" (Giữ nguyên) --- */
+.wishCard {
+  position: relative;
+  background-color: #fffff0;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  word-break: break-word;
+  // break-inside: avoid;
+  // display: inline-block;
+  // width: 100%;
+word-break: break-word;
+  &:hover {
+    transform: scale(1.03) translateY(-3px);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+}
+/* --- MỚI: Style "Ghim Trái Tim" --- */
+.heartPin {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%); // Căn giữa ghim
+  font-size: 1.8rem;
+  // Màu sắc sẽ được set bằng inline style
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); // Đổ bóng cho ghim
+}
+
+/* --- Style nội dung (tương tự code cũ) --- */
+.wishMessage {
+  font-family: $simple-font;
+  font-size: 1rem; // Kích thước chữ vừa phải
+  color: $text-color;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+.wishName {
+  display: block;
+  margin-top: 1rem;
+  font-family: $elegant-font;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $darker-text;
+  text-align: right;
+}
+
+/* --- Responsive (Rất quan trọng) --- */
+@media (max-width: 1200px) {
+  .wishListContainer {
+    column-count: 4; // 4 cột cho tablet lớn
+  }
+}
+@media (max-width: 992px) {
+  .wishListContainer {
+    column-count: 3; // 3 cột cho tablet
+  }
+}
+@media (max-width: 768px) {
+  .wishListContainer {
+    column-count: 2; // 2 cột cho mobile
+  }
+}
+@media (max-width: 576px) {
+  .wishListContainer {
+    column-count: 1; // 1 cột cho mobile nhỏ
+  }
+}

@@ -1,6 +1,6 @@
 body {
 
-  min-height: 100vh;
+  min-min-height: 100vh;
   background-color: #fff;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,47 +13,6 @@ body {
 
 
 
-#heart-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.heart {
-  position: absolute;
-  background-color: transparent;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  /* Dịch tâm về đúng vị trí chuột */
-  /* Animation ban đầu trong JS sẽ ghi đè lên transform này */
-}
-
-.heart::before,
-.heart::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: var(--heart-color);
-  border-radius: 50% 50% 0 0;
-}
-
-.heart::before {
-  left: 50%;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-}
-
-.heart::after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-}
 
 .content {
   width: 100%;

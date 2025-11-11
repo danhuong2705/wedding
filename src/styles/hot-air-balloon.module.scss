@@ -1,33 +1,30 @@
 @keyframes flyUp {
   from {
-    transform: translateY(150vh) translateZ(0); // Thêm translateZ
+    transform: translateY(150vh) translateZ(0);
     opacity: 0;
   }
   5% {
     opacity: 1;
   }
   to {
-    transform: translateY(-120vh) translateZ(0); // Thêm translateZ
+    transform: translateY(-120vh) translateZ(0);
     opacity: 0.8;
   }
 }
+
 .balloonWrapper {
-position: absolute;
+  position: absolute;
   bottom: 0;
   
-  /* 1. Đặt animation-name và các thuộc tính tĩnh ở đây */
+  /* Các thuộc tính này sẽ được áp dụng cho
+     div MỚI (key mới) mỗi lần */
   animation-name: flyUp;
   animation-timing-function: linear;
-  
-  /* 2. Thêm 'animation-fill-mode' vào đây */
   animation-fill-mode: forwards; 
 
   will-change: transform, opacity;
 
-  /*
-    3. Đặt style mặc định (GIỐNG HỆT 'from')
-    và thêm "mẹo" translateZ(0) để kích hoạt hardware acceleration
-  */
+  /* Style mặc định (để chống "flash") */
   opacity: 0;
   transform: translateY(150vh) translateZ(0);
 }

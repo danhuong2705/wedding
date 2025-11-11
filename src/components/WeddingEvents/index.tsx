@@ -1,0 +1,101 @@
+import React from 'react';
+
+import styles from '../../styles/wedding-events.module.scss';
+
+
+const WeddingEventsNew: React.FC = () => {
+  const pinkColor = '#fbc2eb';
+  const blueColor = '#a6d1e6';
+
+  const brideEvent = {
+    title: "Bride's Home",
+    date: 'Saturday, November 30, 2025',
+    time: '09:00 AM',
+    location: "Bride's Home, 123 ABC Street, Ward 1, District 2, HCMC",
+    mapLink: 'https://goo.gl/maps/YOUR_BRIDE_LOCATION', // Thay link Google Map thật
+    image: '/images/flower-gate.png', // Sử dụng ảnh đã import
+    imageAlt: "Bride's Home decorated for the ceremony",
+  };
+
+  const groomEvent = {
+    title: "Groom's Home",
+    date: 'Saturday, November 30, 2025',
+    time: '06:00 PM',
+    location: "Groom's Home, 456 XYZ Street, Ward 3, District 4, HCMC",
+    mapLink: 'https://goo.gl/maps/YOUR_GROOM_LOCATION', // Thay link Google Map thật
+    image: '/images/table.png', // Sử dụng ảnh đã import
+    imageAlt: "Groom's Home decorated for the reception",
+  };
+
+  return (
+    <section className={styles.weddingEventsSection}>
+      <h2 className={styles.sectionTitle}>Wedding Ceremony</h2>
+      <p className={styles.sectionDescription}>
+        We warmly invite you to share our joy at these special events.
+      </p>
+
+      {/* --- BLOCK 1: BRIDE'S HOME (Thông tin trái, ảnh phải) --- */}
+      <div className={`${styles.eventBlock}`}>
+        <div className={styles.infoContent}>
+          <h3 className={styles.eventTitle}>{brideEvent.title}</h3>
+          <p className={styles.eventDetail}>
+            <strong>Date:</strong> {brideEvent.date}
+          </p>
+          <p className={styles.eventDetail}>
+            <strong>Time:</strong> {brideEvent.time}
+          </p>
+          <p className={styles.eventDetail}>
+            <strong>Location:</strong> {brideEvent.location}
+          </p>
+          <a
+            href={brideEvent.mapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.mapButton}
+            aria-label="View map to bride's home"
+          >
+            <img src="/images/location-icon.png" alt="Map Icon" className={styles.mapIcon}
+
+            />
+            <span>View Map</span>
+          </a>
+        </div>
+        <div className={styles.imageContent}>
+          <img src={brideEvent.image} alt={brideEvent.imageAlt} className={styles.eventImage} />
+        </div>
+      </div>
+
+      {/* --- BLOCK 2: GROOM'S HOME (Ảnh trái, thông tin phải) --- */}
+      <div className={`${styles.eventBlock} ${styles.groomEventBlock}`}>
+        <div className={styles.imageContent}>
+          <img src={groomEvent.image} alt={groomEvent.imageAlt} className={styles.eventImage} />
+        </div>
+        <div className={styles.infoContent}>
+          <h3 className={styles.eventTitle}>{groomEvent.title}</h3>
+          <p className={styles.eventDetail}>
+            <strong>Date:</strong> {groomEvent.date}
+          </p>
+          <p className={styles.eventDetail}>
+            <strong>Time:</strong> {groomEvent.time}
+          </p>
+          <p className={styles.eventDetail}>
+            <strong>Location:</strong> {groomEvent.location}
+          </p>
+          <a
+            href={groomEvent.mapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.mapButton}
+            aria-label="View map to groom's home"
+          >
+            <img src="/images/location-icon.png" alt="Map Icon" className={styles.mapIcon}
+            />
+            <span>View Map</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default WeddingEventsNew;

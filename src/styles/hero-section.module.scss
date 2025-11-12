@@ -41,6 +41,7 @@
   position: relative;
   z-index: 0;
   box-sizing: border-box;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
   .flowerBorder {
     border: 2px solid var(--pink-color);
@@ -229,7 +230,7 @@
   }
 
   @media (max-width: 480px) {
-    min-height: 95vh;
+    min-height: 90vh;
     font-size: 20px;
     padding: 0 16px;
 

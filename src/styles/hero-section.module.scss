@@ -1,3 +1,30 @@
+@keyframes slideInFromRight {
+  from {
+    /* Bắt đầu ở vị trí lệch 30px về bên phải */
+    transform: translateX(30px);
+    /* Và bắt đầu trong suốt */
+    opacity: 0;
+  }
+  to {
+    /* Kết thúc ở vị trí gốc (0) */
+    transform: translateX(0);
+    /* Và hiện rõ hoàn toàn */
+    opacity: 1;
+  }
+}
+
+/* Animation cho "Nguyễn Viên" (di chuyển từ TRÁI sang PHẢI) */
+@keyframes slideInFromLeft {
+  from {
+    /* Bắt đầu ở vị trí lệch 30px về bên trái */
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .container {
   transition: display 0.5s ease-in-out;
   min-height: 100vh;
@@ -97,10 +124,20 @@
 
     .brideName {
       color: var(--pink-color);
+      display: inline-block; /* Cần thiết để transform hoạt động */
+  animation-name: slideInFromRight;
+  animation-duration: 1.2s; /* Thời gian chạy: 1.2 giây */
+  animation-timing-function: ease-out; /* Kiểu animation: mượt mà */
+  animation-fill-mode: forwards; 
     }
 
     .groomName {
       color: var(--blue-color);
+      display: inline-block; /* Cần thiết để transform hoạt động */
+  animation-name: slideInFromLeft;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
     }
   }
 

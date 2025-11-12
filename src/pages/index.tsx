@@ -48,7 +48,7 @@ const HomePage = () => {
       {isLoading ?
         <Loading setLoading={setIsLoading} />
         :
-        <div style={{ scrollBehavior: 'smooth', transition: 'all 0.5s ease-in-out' }}>
+        <div className="main-content">
           <HeroSection />
           <ThisIsUs />
           <ADecadeOfUs />
@@ -57,6 +57,13 @@ const HomePage = () => {
           <Guestbook />
           <RsvpSection />
           <SendGifts />
+          <div className="footer">
+            <div className="contact-info">
+              <div>Hương: 0974.676.480</div>
+              <div>Viên: 0989.621.896 </div>
+            </div>
+            <div>© Designed by Emma Dan</div>
+          </div>
         </div>}
     </div>
 

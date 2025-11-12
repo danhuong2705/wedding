@@ -55,7 +55,7 @@ const Loading = ({ setLoading }: LoadingProps) => {
         return;
       }
 
-      const randomDelay = Math.random() * 100 + 20;
+      const randomDelay = Math.random() * 100 + 10;
       progressInterval = setTimeout(runProgress, randomDelay);
     }
 

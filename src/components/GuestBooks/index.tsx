@@ -8,7 +8,7 @@ import {
   serverTimestamp, // Rất quan trọng: dùng thời gian của server
   Timestamp,
 } from 'firebase/firestore';
-import React, { FormEvent,useEffect, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import { FaFeatherAlt } from 'react-icons/fa'; // Icon cây bút (cần cài react-icons)
 
 import styles from '../../styles/guest-books.module.scss';
@@ -98,11 +98,11 @@ const Guestbook: React.FC = () => {
 
   return (
     <section className={styles.guestbookSection}>
-      <h2 className={styles.sectionTitle}>
+      <h2 className={styles.sectionTitle} data-aos="flip-up">
         <FaFeatherAlt />
         Send Your Wishes
       </h2>
-      <p className={styles.sectionDescription}>
+      <p className={styles.sectionDescription} data-aos="flip-up">
         Please leave your warm wishes for the Bride and Groom!
       </p>
 

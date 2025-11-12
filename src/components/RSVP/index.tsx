@@ -1,6 +1,6 @@
 // Import các hàm của Firebase
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import React, { FormEvent,useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import toast from 'react-hot-toast';
 
 import styles from '../../styles/rsvp.module.scss';
@@ -119,8 +119,8 @@ const RsvpSection: React.FC = () => {
   // --- RENDER COMPONENT ---
   return (
     <section className={styles.rsvpSection}>
-      <h2 className={styles.sectionTitle}>Confirm Your Attendance</h2>
-      <p className={styles.sectionDescription}>
+      <h2 className={styles.sectionTitle} data-aos="flip-up">Confirm Your Attendance</h2>
+      <p className={styles.sectionDescription} data-aos="flip-up">
         Please RSVP by November 20th so we can make preparations.
       </p>
 

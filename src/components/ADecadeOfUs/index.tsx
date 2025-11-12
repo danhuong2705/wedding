@@ -1,4 +1,4 @@
-import React, { memo,useCallback, useEffect, useRef, useState, useTransition } from 'react';
+import React, { memo, useCallback, useEffect, useRef, useState, useTransition } from 'react';
 
 import styles from '../../styles/a-decade-of-us.module.scss';
 
@@ -175,7 +175,7 @@ const ADecadeOfUs: React.FC = memo(() => {
   // JSX
   return (
     <section className={styles.decadeOfUs}>
-      <h2 className={styles.title}>A Decade of Us</h2>
+      <h2 className={styles.title} data-aos="flip-up">A Decade of Us</h2>
       <div className={styles.clouds}>
         {Array.from({ length: 7 }).map((_, i) => (
           <div key={i} className={styles.cloud} />

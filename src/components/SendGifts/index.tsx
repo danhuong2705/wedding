@@ -30,7 +30,7 @@ const SendGifts: React.FC = () => {
 
   return (
     <section className={styles.giftsSection}>
-      <h2 className={styles.sectionTitle}>
+      <h2 className={styles.sectionTitle} data-aos="flip-up">
         <img src="/images/gift.png" alt='gift' loading='lazy' />
         Send a Gift
       </h2>

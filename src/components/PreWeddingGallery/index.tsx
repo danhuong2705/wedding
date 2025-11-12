@@ -26,11 +26,11 @@ const PreweddingHeroGrid: React.FC = () => {
     <section className={styles.wrapper}>
       <div className={styles.gallerySection}>
 
-        <h2 className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle} data-aos="flip-up">
           <FaCameraRetro />
           Our Pre-Wedding Moments
         </h2>
-        <p className={styles.sectionDescription}>
+        <p className={styles.sectionDescription} data-aos="flip-up">
           A glimpse into our journey of love.
         </p>
 

@@ -3,7 +3,8 @@ import type { AppProps } from "next/app";
 import { } from 'next/font/google'
 import Head from "next/head";
 import { Toaster } from 'react-hot-toast';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '../styles/globals.scss';
 import '../styles/home.css';
 import { useEffect } from "react";
@@ -11,6 +12,7 @@ import { useEffect } from "react";
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     replaceCursor();
+    AOS.init({ duration: 800, once: true });
   }, []);
 
 

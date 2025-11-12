@@ -29,8 +29,8 @@ const WeddingEventsNew: React.FC = () => {
 
   return (
     <section className={styles.weddingEventsSection}>
-      <h2 className={styles.sectionTitle}>Wedding Ceremony</h2>
-      <p className={styles.sectionDescription}>
+      <h2 className={styles.sectionTitle} data-aos="flip-up">Wedding Ceremony</h2>
+      <p className={styles.sectionDescription} data-aos="flip-up">
         We warmly invite you to share our joy at these special events.
       </p>
 
@@ -60,7 +60,7 @@ const WeddingEventsNew: React.FC = () => {
             <span>View Map</span>
           </a>
         </div>
-        <div className={styles.imageContent}>
+        <div className={styles.imageContent} data-aos="fade-left" data-aos-duration="1000">
           <img src={brideEvent.image} alt={brideEvent.imageAlt} className={styles.eventImage}
             loading='lazy'
           />
@@ -69,7 +69,7 @@ const WeddingEventsNew: React.FC = () => {
 
       {/* --- BLOCK 2: GROOM'S HOME (Ảnh trái, thông tin phải) --- */}
       <div className={`${styles.eventBlock} ${styles.groomEventBlock}`}>
-        <div className={styles.imageContent}>
+        <div className={styles.imageContent} data-aos="fade-right" data-aos-duration="1000">
           <img src={groomEvent.image} alt={groomEvent.imageAlt} className={styles.eventImage} loading='lazy' />
         </div>
         <div className={styles.infoContent}>

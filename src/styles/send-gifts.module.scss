@@ -5,8 +5,7 @@
 .giftsSection {
   text-align: center;
   padding: 80px 0;
-  min-height: 100vh;
-  ;
+  // min-height: 100vh;
   top: 0;
   width: 100%;
   box-sizing: border-box;
@@ -16,14 +15,14 @@
 
 .sectionTitle {
   font-family: var(--elegant-font);
-  font-size: 56px;
+  font-size: 48px;
   color: var(--text-color);
     margin-bottom: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem; // Khoảng cách giữa icon và chữ
-
+  margin-bottom: 60px;
   img {
     width: 50px;
     height: 50px;
@@ -39,7 +38,7 @@
 
 .sectionDescription {
   font-family: var(--simple-font);
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: var(--text-color);
   max-width: 700px;
   margin: 0 auto 3rem auto;
@@ -164,8 +163,11 @@
 
 /* --- Responsive cho điện thoại --- */
 @media (max-width: 768px) {
+  .giftsSection {
+    padding: 30px 16px;
+  }
   .sectionTitle {
-    font-size: 2.8rem;
+    font-size: 28px;
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -191,7 +193,7 @@
   }
 
   .personName {
-    font-size: 2rem;
+    font-size: 28px;
   }
 
   .qrCode {

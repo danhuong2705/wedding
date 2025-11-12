@@ -14,12 +14,12 @@ $simple-font: 'Montserrat', sans-serif;
   text-align: center;
   margin: 4rem auto;
   padding: 1rem;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .sectionTitle {
   font-family: $elegant-font;
-  font-size: 3.5rem;
+  font-size: 48px;
   color: $darker-text;
   margin-bottom: 1.5rem;
   display: flex;
@@ -29,13 +29,12 @@ $simple-font: 'Montserrat', sans-serif;
 }
 
 .sectionDescription {
-  font-family: $simple-font;
-  font-size: 1rem;
+  font-family: var(--elegant-font);
+  font-size: 1.8rem;
   color: $text-color;
   margin-bottom: 2.5rem;
 }
 
-/* --- Form --- */
 .wishForm {
   background-color: #ffffff;
   padding: 2.5rem;
@@ -43,29 +42,31 @@ $simple-font: 'Montserrat', sans-serif;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   margin-bottom: 3rem;
   text-align: left;
-  /* THÊM 3 DÒNG NÀY ĐỂ THU HẸP VÀ CĂN GIỮA FORM: */
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .inputGroup {
   margin-bottom: 1.5rem;
-  
+
   label {
     display: block;
-    font-family: $simple-font;
+    font-family: var(--elegant-font);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: $darker-text;
     margin-bottom: 0.5rem;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     padding: 0.8rem 1rem;
-    font-family: $simple-font;
-    font-size: 1rem;
+    font-family: var(--elegant-font);
+    font-size: 1.5rem;
     border: 1px solid $border-color;
     border-radius: 8px;
     box-sizing: border-box; // Đảm bảo padding không làm vỡ layout
@@ -84,8 +85,8 @@ $simple-font: 'Montserrat', sans-serif;
 }
 
 .submitButton {
-  font-family: $simple-font;
-  font-size: 1.1rem;
+  font-family: var(--elegant-font);
+  font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
   border: none;
@@ -93,10 +94,11 @@ $simple-font: 'Montserrat', sans-serif;
   padding: 0.9rem 2.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+  margin: 0 auto;
+
   // Hiệu ứng gradient 2 màu chủ đạo
   background: linear-gradient(135deg, $pink-color, $blue-color);
-  
+
   &:hover {
     box-shadow: 0 4px 15px rgba($pink-color, 0.4);
     transform: translateY(-2px);
@@ -120,10 +122,27 @@ $simple-font: 'Montserrat', sans-serif;
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+
   .sectionTitle {
-    font-size: 2.8rem;
+    font-size: 28px;
+  }
+  .sectionDescription {
+    font-size: 1.2rem;
   }
   .wishForm {
     padding: 1.5rem;
+    .inputGroup {
+      label {
+        font-size: 1rem;
+      }
+      input,
+      textarea {
+        font-size: 1rem;
+      }
+    }
+  }
+  .submitButton {
+    font-size: 1.2rem;
+    padding: 0.7rem 1.5rem;
   }
 }

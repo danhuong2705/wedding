@@ -26,10 +26,8 @@
   */
   top: var(--cloud-top);
   left: var(--cloud-left);
-  // animation: float var(--cloud-duration) ease-in-out var(--cloud-delay) infinite alternate;
   animation: drift 25s linear infinite;
   animation-duration: var(--animation-duration);
-  /* Tốc độ khác nhau */
   animation-delay: var(--animation-delay);
 
   /* Pseudo-elements (giữ nguyên) */
@@ -64,10 +62,6 @@
   &:nth-child(1) {
     --cloud-top: 5%;
     --cloud-left: 10%;
-    // --cloud-scale: 1.2;
-    // /* To */
-    // --cloud-duration: 6s;
-    // --cloud-delay: -1s;
     animation-duration: 25s;
     animation-delay: 0s;
 
@@ -89,12 +83,7 @@
   &:nth-child(2) {
     --cloud-top: 10%;
     --cloud-left: 80%;
-    // --cloud-scale: 0.9;
-    // /* Nhỏ */
-    // --cloud-duration: 5.5s;
-    // --cloud-delay: -3s;
     animation-duration: 35s;
-    /* Tốc độ khác nhau */
     animation-delay: -5s;
 
     &::before {
@@ -115,12 +104,7 @@
   &:nth-child(3) {
     --cloud-top: 25%;
     --cloud-left: 2%;
-    // --cloud-scale: 0.8;
-    // /* Nhỏ */
-    // --cloud-duration: 7s;
-    // --cloud-delay: -0.5s;
     animation-duration: 30s;
-    /* Tốc độ khác nhau */
     animation-delay: -10s;
     width: 182px;
     height: 53px;
@@ -137,10 +121,6 @@
   &:nth-child(4) {
     --cloud-top: 30%;
     --cloud-left: 70%;
-    // --cloud-scale: 1.2;
-    // /* Rất to */
-    // --cloud-duration: 5s;
-    // --cloud-delay: -2s;
     animation-duration: 30s;
     animation-delay: -5s;
 
@@ -162,10 +142,6 @@
   &:nth-child(5) {
     --cloud-top: 50%;
     --cloud-left: 20%;
-    // --cloud-scale: 1.0;
-    // /* Trung bình */
-    // --cloud-duration: 6.5s;
-    // --cloud-delay: -1.5s;
     animation-duration: 25s;
     animation-delay: -15s;
     width: 182px;
@@ -182,10 +158,6 @@
   &:nth-child(6) {
     --cloud-top: 55%;
     --cloud-left: 85%;
-    // --cloud-scale: 0.9;
-    // /* Nhỏ */
-    // --cloud-duration: 5.8s;
-    // --cloud-delay: -4s;
     animation-duration: 35s;
     animation-delay: -10s;
 
@@ -200,12 +172,7 @@
 
   &:nth-child(7) {
     --cloud-top: 35%;
-    /* Gần trung tâm, sau tiêu đề */
     --cloud-left: 45%;
-    --cloud-scale: 0.7;
-    /* Rất nhỏ */
-    --cloud-duration: 7.5s;
-    --cloud-delay: -2.5s;
     animation-duration: 45s;
     animation-delay: 0s;
 
@@ -247,7 +214,11 @@
   position: relative;
   z-index: 10;
   font-family: var(--elegant-font);
-
+@media screen and (max-width: 768px) {
+    font-size: 36px;
+    padding: 20px 10px;
+  }
+  
 }
 
 .clouds {

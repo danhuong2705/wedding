@@ -63,10 +63,10 @@ const WishList: React.FC<WishListProps> = ({ wishes, isLoading }) => {
         Tôi sẽ đặt chúng bên trên.
       */}
 
-      {isLoading && <p>Đang tải lời chúc...</p>}
+      {isLoading && <p>Loading wishes...</p>}
 
       {!isLoading && wishes.length === 0 && (
-        <p>Hãy là người đầu tiên gửi lời chúc!</p>
+        <p className={styles.firstWish}>Be the first to send a wish!</p>
       )}
 
       {/* 5. Vẫn .map() như bình thường */}

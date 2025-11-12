@@ -13,16 +13,14 @@ $simple-font: 'Montserrat', sans-serif;
 .weddingEventsSection {
   text-align: center;
   margin: 4rem auto;
-  padding: 1rem;
+  padding: 0 1rem;
   max-width: 1200px; // Chiều rộng tối đa cho section
-  // background-color: $light-bg;
   border-radius: 15px;
-  // box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
 }
 
 .sectionTitle {
   font-family: $elegant-font;
-  font-size: 3.8rem;
+  font-size: 48px;
   color: $darker-text;
   margin-bottom: 1rem;
   padding-top: 1.5rem;
@@ -30,7 +28,7 @@ $simple-font: 'Montserrat', sans-serif;
 
 .sectionDescription {
   font-family: var(--elegant-font);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: $text-color;
   margin-bottom: 3.5rem;
   max-width: 700px;
@@ -49,6 +47,11 @@ $simple-font: 'Montserrat', sans-serif;
   // Loại bỏ margin-bottom cho block cuối cùng
   &:last-child {
     margin-bottom: 0;
+  }
+  &.brideEventBlock {
+    .eventTitle {
+      color:var(--pink-color);
+    }
   }
   &.groomEventBlock {
     .infoContent {
@@ -102,7 +105,7 @@ $simple-font: 'Montserrat', sans-serif;
 
 .eventDetail {
   font-family: var(--elegant-font);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: $text-color;
   margin-bottom: 0.8rem;
   
@@ -126,6 +129,7 @@ $simple-font: 'Montserrat', sans-serif;
   margin-top: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  font-size: 1.2rem;
 
   .mapIcon {
     width: 24px;
@@ -157,6 +161,11 @@ $simple-font: 'Montserrat', sans-serif;
     gap: 2rem;
     padding: 0 1rem;
     margin-bottom: 3rem;
+    &.groomEventBlock {
+    .infoContent {
+      text-align: center; // Căn giữa thông tin khi thành cột
+    }
+  }
   }
 
   .blockReverse {
@@ -182,7 +191,7 @@ $simple-font: 'Montserrat', sans-serif;
   }
 
   .eventTitle {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .eventDetail {
     font-size: 0.95rem;
@@ -190,8 +199,12 @@ $simple-font: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 768px) {
+  .weddingEventsSection {
+    margin: 1rem 0;
+  }
   .sectionTitle {
-    font-size: 3rem;
+    font-size: 28px;
+    margin-bottom:16px;
   }
   .sectionDescription {
     font-size: 0.9rem;
@@ -204,5 +217,8 @@ $simple-font: 'Montserrat', sans-serif;
       width: 20px;
       height: 28px;
     }
+  }
+  .eventTitle {
+    font-size: 28px;
   }
 }

@@ -10,34 +10,35 @@ $simple-font: 'Montserrat', sans-serif;
 
 /* --- Section tổng thể --- */
 .wrapper {
-   margin: 4rem auto;
+  margin: 4rem auto;
   padding: 80px 0;
-   background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
-  border-radius: 15px;
-  min-height: 100vh;
+  background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
+  // min-height: 100vh;
   box-sizing: border-box;
 }
+
 .gallerySection {
-text-align: center;
-max-width: 1200px;
-margin: 0 auto;
- 
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
 }
 
 .sectionTitle {
   font-family: $elegant-font;
-  font-size: 3.5rem;
-  color: $darker-text;
+  font-size: 48px;
+  color: var(--text-color);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
 }
 
 .sectionDescription {
-  font-family: $simple-font;
-  font-size: 1.05rem;
+  font-family: var(--elegant-font);
+  font-size: 1.8rem;
   color: $text-color;
   margin-bottom: 3rem;
   max-width: 700px;
@@ -53,7 +54,7 @@ margin: 0 auto;
 
 /* --- Cột 1: Ảnh Hero --- */
 .heroWrapper {
-  flex: 5; 
+  flex: 5;
   display: flex;
   height: auto;
   width: 100%;
@@ -71,10 +72,10 @@ margin: 0 auto;
 
 /* --- Cột 2: Lưới 9 ảnh thu nhỏ --- */
 .thumbnailGrid {
-  flex: 7; 
+  flex: 7;
   display: grid;
   grid-template-columns: repeat(3, 1fr); // 3 cột
-  grid-template-rows: repeat(3, 1fr);    // 3 hàng
+  grid-template-rows: repeat(3, 1fr); // 3 hàng
   gap: 0.75rem; // Khoảng cách nhỏ
   height: 100%;
 }
@@ -104,22 +105,39 @@ margin: 0 auto;
 
 /* --- Responsive --- */
 @media (max-width: 992px) {
+  .wrapper {
+    padding: 40px 16px;
+  }
+
   .galleryContainer {
     max-height: 400px; // Giảm chiều cao
     flex: 1.5; // Cho lưới nhỏ hơn 1 chút
   }
+
+  .sectionTitle {
+    font-size: 2.25rem;
+  }
 }
 
 @media (max-width: 768px) {
-  // Chuyển 2 cột thành 2 hàng
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionDescription {
+    font-size: 1.2rem;
+  }
+
   .galleryContainer {
     flex-direction: column;
     max-height: none; // Bỏ giới hạn chiều cao
     gap: 1.5rem;
   }
+
   .heroWrapper {
     height: 400px; // Đặt chiều cao cố định cho hero
   }
+
   .thumbnailGrid {
     height: auto; // Chiều cao tự động
   }

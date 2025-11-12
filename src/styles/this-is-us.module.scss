@@ -70,3 +70,45 @@
   }
 
 }
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+    min-height: 80vh;
+
+    .container {
+      // flex-direction: column;
+      font-size: 24px;
+
+      .imageWrapper {
+        .mainPhoto {
+          max-height: 60vh;
+          max-width: 50vw;
+        }
+
+        .paperClip {
+          width: 40px;
+          top: -14px;
+        }
+
+        .arrow {
+          width: 50px;
+          top: 50px;
+          left: -50px;
+        }
+
+        .secondArrow {
+          width: 50px;
+          right: -40px;
+        }
+
+        .textOverlay {
+          margin-top: 16px;
+          font-size: 24px;
+          right: -40px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

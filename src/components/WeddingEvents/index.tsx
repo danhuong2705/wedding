@@ -9,20 +9,20 @@ const WeddingEventsNew: React.FC = () => {
 
   const brideEvent = {
     title: "Bride's Home",
-    date: 'Saturday, November 30, 2025',
-    time: '09:00 AM',
-    location: "Bride's Home, 123 ABC Street, Ward 1, District 2, HCMC",
-    mapLink: 'https://goo.gl/maps/YOUR_BRIDE_LOCATION', // Thay link Google Map thật
+    date: 'Sunday, November 30, 2025',
+    time: '10:30',
+    location: "Minh Quan 7, Tran Yen, Lao Cai",
+    mapLink: 'https://maps.app.goo.gl/3qzb3bqmU3svjytaA', // Thay link Google Map thật
     image: '/images/flower-gate.png', // Sử dụng ảnh đã import
     imageAlt: "Bride's Home decorated for the ceremony",
   };
 
   const groomEvent = {
     title: "Groom's Home",
-    date: 'Saturday, November 30, 2025',
-    time: '06:00 PM',
-    location: "Groom's Home, 456 XYZ Street, Ward 3, District 4, HCMC",
-    mapLink: 'https://goo.gl/maps/YOUR_GROOM_LOCATION', // Thay link Google Map thật
+    date: 'Sunday, November 30, 2025',
+    time: '16:00',
+    location: "Vong Nguyet, Tam Giang, Bac Ninh",
+    mapLink: 'https://maps.app.goo.gl/fXTuKMqVFv39BUr69', // Thay link Google Map thật
     image: '/images/table.png', // Sử dụng ảnh đã import
     imageAlt: "Groom's Home decorated for the reception",
   };
@@ -35,7 +35,7 @@ const WeddingEventsNew: React.FC = () => {
       </p>
 
       {/* --- BLOCK 1: BRIDE'S HOME (Thông tin trái, ảnh phải) --- */}
-      <div className={`${styles.eventBlock}`}>
+      <div className={`${styles.eventBlock} ${styles.brideEventBlock}`}>
         <div className={styles.infoContent}>
           <h3 className={styles.eventTitle}>{brideEvent.title}</h3>
           <p className={styles.eventDetail}>

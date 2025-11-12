@@ -48,7 +48,7 @@ const HomePage = () => {
       {isLoading ?
         <Loading setLoading={setIsLoading} />
         :
-        <>
+        <div style={{ scrollBehavior: 'smooth', transition: 'all 0.5s ease-in-out' }}>
           <HeroSection />
           <ThisIsUs />
           <ADecadeOfUs />
@@ -57,7 +57,7 @@ const HomePage = () => {
           <Guestbook />
           <RsvpSection />
           <SendGifts />
-        </>}
+        </div>}
     </div>
 
   );

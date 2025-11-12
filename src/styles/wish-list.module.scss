@@ -17,8 +17,20 @@ $darker-text: var(--text-color);
   column-count: 1;
 }
 
+.firstWish {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+  font-family: var(--elegant-font);
+}
+
 /* 2. 2 cột cho màn hình > 576px (Điện thoại ngang) */
 @media (min-width: 576px) {
+  .myMasonryGrid {
+    max-height: 100vh;
+    overflow: auto;
+  }
+
   .wishListContainer {
     column-count: 2;
   }
@@ -44,17 +56,22 @@ $darker-text: var(--text-color);
     column-count: 5;
   }
 }
+
 .myMasonryGrid {
   display: flex;
-  margin-left: -1.5rem; /* Bù trừ cho padding của cột */
+  // margin-left: -1.5rem; /* Bù trừ cho padding của cột */
   width: auto;
-  margin-top: 3rem;
+  margin-top: 6rem;
+  justify-content: center;
+
 }
 
 .myMasonryGrid_column {
-  padding-left: 1.5rem; /* Đây là khoảng cách giữa các cột */
+  padding-left: 1.5rem;
+  /* Đây là khoảng cách giữa các cột */
   background-clip: padding-box;
 }
+
 /* --- Style "Tờ Note" (Giữ nguyên) --- */
 .wishCard {
   position: relative;
@@ -67,13 +84,15 @@ $darker-text: var(--text-color);
   // break-inside: avoid;
   // display: inline-block;
   // width: 100%;
-word-break: break-word;
+  word-break: break-word;
+
   &:hover {
     transform: scale(1.03) translateY(-3px);
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
     z-index: 10;
   }
 }
+
 /* --- MỚI: Style "Ghim Trái Tim" --- */
 .heartPin {
   position: absolute;
@@ -87,8 +106,8 @@ word-break: break-word;
 
 /* --- Style nội dung (tương tự code cũ) --- */
 .wishMessage {
-  font-family: $simple-font;
-  font-size: 1rem; // Kích thước chữ vừa phải
+  font-family: var(--elegant-font);
+  font-size: 1.5rem; // Kích thước chữ vừa phải
   color: $text-color;
   line-height: 1.6;
   font-style: italic;
@@ -111,16 +130,27 @@ word-break: break-word;
     column-count: 4; // 4 cột cho tablet lớn
   }
 }
+
 @media (max-width: 992px) {
   .wishListContainer {
     column-count: 3; // 3 cột cho tablet
   }
 }
+
 @media (max-width: 768px) {
   .wishListContainer {
     column-count: 2; // 2 cột cho mobile
   }
+
+  .wishMessage {
+    font-size: 1rem; // Giảm kích thước chữ trên mobile
+  }
+
+  .wishName {
+    font-size: 1.2rem; // Giảm kích thước tên trên mobile
+  }
 }
+
 @media (max-width: 576px) {
   .wishListContainer {
     column-count: 1; // 1 cột cho mobile nhỏ

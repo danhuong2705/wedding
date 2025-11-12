@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import styles from '../../styles/send-gifts.module.scss';
+import toast from 'react-hot-toast';
 
 const SendGifts: React.FC = () => {
   // --- THÔNG TIN CỦA CÔ DÂU VÀ CHÚ RỂ ---
@@ -22,12 +23,9 @@ const SendGifts: React.FC = () => {
   };
   const [copiedStatus, setCopiedStatus] = useState<{ [key: string]: boolean }>({});
 
-  const handleCopy = (accountNumber: string, person: string) => {
+  const handleCopy = (accountNumber: string) => {
     navigator.clipboard.writeText(accountNumber);
-    setCopiedStatus(prev => ({ ...prev, [person]: true }));
-    setTimeout(() => {
-      setCopiedStatus(prev => ({ ...prev, [person]: false }));
-    }, 2000);
+    toast.success('Copied');
   };
 
   return (
@@ -50,7 +48,7 @@ const SendGifts: React.FC = () => {
           </div>
           <button
             className={styles.copyButton}
-            onClick={() => navigator.clipboard.writeText(brideInfo.accountNumber)}
+            onClick={() => handleCopy(brideInfo.accountNumber)}
           >
             Copy
           </button>
@@ -69,7 +67,7 @@ const SendGifts: React.FC = () => {
           </div>
           <button
             className={styles.copyButton}
-            onClick={() => navigator.clipboard.writeText(groomInfo.accountNumber)}
+            onClick={() => handleCopy(groomInfo.accountNumber)}
           >
             Copy
           </button>

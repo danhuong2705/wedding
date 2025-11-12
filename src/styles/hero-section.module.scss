@@ -37,6 +37,7 @@
   width: 100%;
   position: relative;
   z-index: 0;
+  box-sizing: border-box;
 
   .flowerBorder {
     border: 2px solid var(--pink-color);

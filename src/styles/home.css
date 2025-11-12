@@ -1,22 +1,7 @@
-body {
-
-  min-height: 100vh;
-  background-color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  cursor: default;
-  width: 100%;
-}
-
-
-
-
-
 .content {
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 .main-content {
   animation: fadeIn 1s ease-in-out;

@@ -2,7 +2,7 @@
 $pink-color: #fbc2eb;
 $blue-color: #a6d1e6;
 $text-color: #555;
-$darker-text: #444;
+$darker-text: var(--text-color);
 $border-color: #eee;
 $light-pink-bg: #feeef7; // Nền cho card lời chúc
 

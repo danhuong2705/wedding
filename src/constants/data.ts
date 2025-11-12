@@ -30,4 +30,6 @@ export const milestones: Milestone[] = [
   { year: 2023, imageUrl: '/images/our-photos/photo_2023.jpeg' },
   { year: 2024, imageUrl: '/images/our-photos/photo_2024.jpeg' },
   { year: 2025, imageUrl: '/images/our-photos/photo_2025.jpg' },
+  { year: 2025, imageUrl: '/images/our-photos/photo_1_2025.jpg' },
+
 ];

@@ -64,7 +64,7 @@
   --color-primary-400: oklch(0.709 0.01 56.259); /* #a8a29e */
   --color-primary-500: oklch(0.553 0.013 58.071); /* #78716c */
   --color-primary-600: oklch(0.444 0.011 73.639); /* #57534e */
-  --color-primary-700: oklch(0.374 0.01 67.558); /* #44403c */
+  --color-primary-700: oklch(0.374 0.01 67.558); /* var(--text-color)03c */
   --color-primary-800: oklch(0.268 0.007 34.298); /* #292524 */
   --color-primary-900: oklch(0.216 0.006 56.043); /* #1c1917 */
   --color-primary-950: oklch(0.147 0.004 49.25); /* #0c0a09 */

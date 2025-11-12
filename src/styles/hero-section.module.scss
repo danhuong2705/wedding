@@ -10,7 +10,48 @@
   width: 100%;
   position: relative;
   z-index: 0;
- background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
+  // background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
+
+  .flowerBorder {
+    border: 2px solid var(--pink-color);
+    padding: 32px;
+    border-radius: 999px;
+    position: relative;
+    aspect-ratio: 3 / 4.5;
+    position: relative;
+
+    img {
+      width: 130px;
+      height: auto;
+    }
+
+    .brideLeter {
+      position: absolute;
+      background-color: #fff;
+      padding: 8px;
+      font-size: 48px;
+      font-family: var(--elegant-font);
+      color: var(--pink-color);
+      top: 20%;
+      left: 0;
+      transform: translateX(-50%);
+
+    }
+
+    .groomLetter {
+      position: absolute;
+      background-color: #fff;
+      padding: 8px;
+      font-size: 48px;
+      font-family: var(--elegant-font);
+      color: var(--pink-color);
+
+      bottom: 20%;
+      right: 0;
+      transform: translateX(50%);
+    }
+  }
+
   .pinkBow {
     position: absolute;
     top: 10px;
@@ -51,11 +92,12 @@
 
   .saveTheDate {
     color: var(--text-color);
+    margin-top: 32px;
   }
 
   .names {
     font-size: 80px;
-    margin-top: 8px;
+    // margin-top: 8px;
 
     .and {
       font-size: 40px;
@@ -64,7 +106,7 @@
     }
 
     .brideName {
-      color: #f0afd9;
+      color: var(--pink-color);
     }
 
     .groomName {

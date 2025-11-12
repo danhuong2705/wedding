@@ -2,7 +2,7 @@
 $elegant-font: 'Dancing Script', cursive;
 $simple-font: 'Montserrat', sans-serif;
 $text-color: #555;
-$darker-text: #444;
+$darker-text: var(--text-color);
 /* --- Biến màu & phông chữ (Giữ nguyên) --- */
 
 /* --- THAY ĐỔI: Layout Pinterest --- */

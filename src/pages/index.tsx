@@ -8,6 +8,7 @@ import RsvpSection from "@/components/RSVP";
 import SendGifts from "@/components/SendGifts";
 import ThisIsUs from "@/components/ThisIsUs";
 import WeddingEvent from "@/components/WeddingEvents";
+import PreweddingGallery from "@/components/PreWeddingGallery";
 
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -122,6 +123,7 @@ const HomePage = () => {
           <ThisIsUs />
           <ADecadeOfUs />
           <WeddingEvent />
+          <PreweddingGallery />
           <Guestbook />
           <RsvpSection />
           <SendGifts />

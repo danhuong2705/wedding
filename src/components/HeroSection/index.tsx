@@ -7,7 +7,11 @@ const HeroSection = () => {
       <img src="/images/blue-bow.png" alt="Blue Bow" className={styles.blueBowSecond} />
       <img src="/images/pink-bow.png" alt="Pink Bow" className={styles.pinkBowSecond} />
 
-
+      <div className={styles.flowerBorder}>
+        <img src="/images/tulip.png" alt='tulip' />
+        <span className={styles.brideLeter}>H</span>
+        <span className={styles.groomLetter}>V</span>
+      </div>
       <div className={styles.saveTheDate}>
         Save the date
       </div>

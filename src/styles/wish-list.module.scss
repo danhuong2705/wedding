@@ -26,10 +26,7 @@ $darker-text: var(--text-color);
 
 /* 2. 2 cột cho màn hình > 576px (Điện thoại ngang) */
 @media (min-width: 576px) {
-  .myMasonryGrid {
-    max-height: 100vh;
-    overflow: auto;
-  }
+
 
   .wishListContainer {
     column-count: 2;
@@ -152,6 +149,11 @@ $darker-text: var(--text-color);
 }
 
 @media (max-width: 576px) {
+  .myMasonryGrid {
+    max-height: 100vh;
+    overflow: auto;
+  }
+
   .wishListContainer {
     column-count: 1; // 1 cột cho mobile nhỏ
   }

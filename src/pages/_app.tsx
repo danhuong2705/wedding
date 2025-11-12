@@ -135,7 +135,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:description" content="We're getting married! Welcome to the official wedding celebration site for Dắn Hương & Nguyễn Viên. Join us on November 30, 2025. All info here!" />
         <meta name="twitter:image" content="https://wedding.huongdtt.me/thumbnail.jpeg" />
       </Head>
-      <div style={{ position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'relative' }}>
         <div id="heart-container"></div>
         <Component {...pageProps} />
       </div>

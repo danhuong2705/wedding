@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styles from '../../styles/send-gifts.module.scss';
 import toast from 'react-hot-toast';
+import { FaGift } from 'react-icons/fa';
 
 const SendGifts: React.FC = () => {
   // --- THÔNG TIN CỦA CÔ DÂU VÀ CHÚ RỂ ---

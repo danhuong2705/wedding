@@ -7,7 +7,7 @@ const ThisIsUs = () => {
         <div data-aos="fade-left">This is us !!</div>
         <div className={styles.imageWrapper}>
           <img src="/images/arrow-wd.png" alt="Arrow" className={styles.arrow} loading='lazy' data-aos="fade-in" />
-          <img src="/images/wedding-photos/TINN8766.webp" alt="This is us" className={styles.mainPhoto} loading='lazy' />
+          <img src="/images/us.webp" alt="This is us" className={styles.mainPhoto} loading='lazy' />
           <img src="/images/paper-clip.png" alt="Paper Clip" className={styles.paperClip} loading='lazy' />
           <img src="/images/arrow-wd.png" alt="Arrow" className={styles.secondArrow} loading='lazy' data-aos="fade-in" />
           <div className={styles.textOverlay} data-aos="zoom-in" data-aos-delay="100">

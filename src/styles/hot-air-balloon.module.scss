@@ -31,7 +31,7 @@
 
 .balloon {
   position: relative;
-  width: 350px; 
+  width: 300px; 
   height: auto;
   transform-origin: bottom center;
 
@@ -57,14 +57,14 @@
 
   .yearTag {
     position: absolute;
-    bottom: 15px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3; 
     background-color: rgba(255, 255, 255, 0.9);
     color: #333;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 3px 8px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);

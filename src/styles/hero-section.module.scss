@@ -5,6 +5,7 @@
     /* Và bắt đầu trong suốt */
     opacity: 0;
   }
+
   to {
     /* Kết thúc ở vị trí gốc (0) */
     transform: translateX(0);
@@ -20,11 +21,13 @@
     transform: translateX(-30px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 .container {
   transition: display 0.5s ease-in-out;
   min-height: 100vh;
@@ -125,20 +128,24 @@
 
     .brideName {
       color: var(--pink-color);
-      display: inline-block; /* Cần thiết để transform hoạt động */
-  animation-name: slideInFromRight;
-  animation-duration: 1.2s; /* Thời gian chạy: 1.2 giây */
-  animation-timing-function: ease-out; /* Kiểu animation: mượt mà */
-  animation-fill-mode: forwards; 
+      display: inline-block;
+      /* Cần thiết để transform hoạt động */
+      animation-name: slideInFromRight;
+      animation-duration: 1.2s;
+      /* Thời gian chạy: 1.2 giây */
+      animation-timing-function: ease-out;
+      /* Kiểu animation: mượt mà */
+      animation-fill-mode: forwards;
     }
 
     .groomName {
       color: var(--blue-color);
-      display: inline-block; /* Cần thiết để transform hoạt động */
-  animation-name: slideInFromLeft;
-  animation-duration: 1.2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
+      display: inline-block;
+      /* Cần thiết để transform hoạt động */
+      animation-name: slideInFromLeft;
+      animation-duration: 1.2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -222,24 +229,30 @@
   }
 
   @media (max-width: 480px) {
+    min-height: 95vh;
     font-size: 20px;
     padding: 0 16px;
+
     .pinkBow {
       top: 10px;
       left: 0;
     }
+
     .pinkBowSecond {
       bottom: 10px;
       right: 0;
     }
+
     .blueBow {
       top: 10px;
       right: 0;
     }
+
     .blueBowSecond {
       bottom: 10px;
       left: 0;
     }
+
     .flowerBorder {
       padding: 12px;
 

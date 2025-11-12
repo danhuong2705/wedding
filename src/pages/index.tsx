@@ -10,6 +10,7 @@ import Loading from "@/components/Loading";
 // import WeddingEvent from "@/components/WeddingEvents";
 // import PreweddingGallery from "@/components/PreWeddingGallery";
 import dynamic from 'next/dynamic'
+import MusicPlayer from "@/components/MusicPlayer";
 
 // const HeroSection = dynamic(() => import('@/components/HeroSection'), {
 //   loading: () => <p>Loading...</p>,
@@ -64,6 +65,7 @@ const HomePage = () => {
             </div>
             <div>© Designed by Emma Dan</div>
           </div>
+          <MusicPlayer />
         </div>}
     </div>
 

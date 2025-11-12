@@ -116,7 +116,24 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet"></link>
-        <title>Viên Dắn Wedding</title>
+        <title>Viên - Dắn Wedding</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="We're getting married! Welcome to the official wedding celebration site for Dắn Hương & Nguyễn Viên. Join us on November 30, 2025. All info here!" />
+
+        <meta property="og:title" content="Viên - Dắn Wedding" />
+
+        <meta property="og:description" content="We're getting married! Welcome to the official wedding celebration site for Dắn Hương & Nguyễn Viên. Join us on November 30, 2025. All info here!" />
+
+        <meta property="og:image" content="https://wedding.huongdtt.me/thumbnail.jpeg" />
+
+        <meta property="og:url" content="https://wedding.huongdtt.me" />
+
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Viên - Dắn Wedding" />
+        <meta name="twitter:description" content="We're getting married! Welcome to the official wedding celebration site for Dắn Hương & Nguyễn Viên. Join us on November 30, 2025. All info here!" />
+        <meta name="twitter:image" content="https://wedding.huongdtt.me/thumbnail.jpeg" />
       </Head>
       <div style={{ position: 'relative', overflow: 'hidden' }}>
         <div id="heart-container"></div>

@@ -42,7 +42,7 @@ interface ActiveBalloon {
   graphicUrl: string;
 }
 
-const NUM_BALLOONS = 8; // Số lượng khinh khí cầu TỒN TẠI (pool)
+const NUM_BALLOONS = 5; // Số lượng khinh khí cầu TỒN TẠI (pool)
 const MIN_SEPARATION_PERCENT = 20;
 
 // Component cha sẽ được memo để tránh re-render không cần thiết

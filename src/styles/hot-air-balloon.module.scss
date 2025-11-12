@@ -31,7 +31,7 @@
 
 .balloon {
   position: relative;
-  width: 200px; 
+  width: 350px; 
   height: auto;
   transform-origin: bottom center;
 
@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 768px) {
   .balloon {
-    width: 120px; 
+    width: 150px; 
   }
   .yearTag {
     font-size: 0.8rem;

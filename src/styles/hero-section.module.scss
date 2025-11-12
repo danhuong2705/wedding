@@ -10,7 +10,6 @@
   width: 100%;
   position: relative;
   z-index: 0;
-  // background: linear-gradient(135deg, #feeef7 0%, #e8f3f9 100%);
 
   .flowerBorder {
     border: 2px solid var(--pink-color);
@@ -18,26 +17,13 @@
     border-radius: 999px;
     position: relative;
     aspect-ratio: 3 / 4.5;
-    position: relative;
 
     img {
       width: 130px;
       height: auto;
     }
 
-    .brideLeter {
-      position: absolute;
-      background-color: #fff;
-      padding: 8px;
-      font-size: 48px;
-      font-family: var(--elegant-font);
-      color: var(--pink-color);
-      top: 20%;
-      left: 0;
-      transform: translateX(-50%);
-
-    }
-
+    .brideLeter,
     .groomLetter {
       position: absolute;
       background-color: #fff;
@@ -45,7 +31,15 @@
       font-size: 48px;
       font-family: var(--elegant-font);
       color: var(--pink-color);
+    }
 
+    .brideLeter {
+      top: 20%;
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    .groomLetter {
       bottom: 20%;
       right: 0;
       transform: translateX(50%);
@@ -65,9 +59,7 @@
     position: absolute;
     bottom: 10px;
     right: 20px;
-    /* transform: rotate(15deg); */
     transform: rotate(195deg);
-
   }
 
   .blueBow {
@@ -81,7 +73,6 @@
     position: absolute;
     bottom: 10px;
     left: 20px;
-    /* transform: rotate(335deg); */
     transform: rotate(155deg);
   }
 
@@ -97,7 +88,6 @@
 
   .names {
     font-size: 80px;
-    // margin-top: 8px;
 
     .and {
       font-size: 40px;
@@ -112,17 +102,120 @@
     .groomName {
       color: var(--blue-color);
     }
-
-
   }
 
   .date {
     margin-top: 8px;
     color: var(--text-color);
     font-size: 24px;
-
   }
 
+  // Responsive styles
+  @media (max-width: 1024px) {
+    font-size: 36px;
 
+    .flowerBorder {
+      padding: 24px;
 
+      img {
+        width: 100px;
+      }
+
+      .brideLeter,
+      .groomLetter {
+        font-size: 36px;
+      }
+    }
+
+    .pinkBow,
+    .blueBow,
+    .pinkBowSecond,
+    .blueBowSecond {
+      width: 120px;
+    }
+
+    .names {
+      font-size: 60px;
+
+      .and {
+        font-size: 30px;
+      }
+    }
+
+    .date {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+
+    .flowerBorder {
+      padding: 16px;
+
+      img {
+        width: 80px;
+      }
+
+      .brideLeter,
+      .groomLetter {
+        font-size: 28px;
+      }
+    }
+
+    .pinkBow,
+    .blueBow,
+    .pinkBowSecond,
+    .blueBowSecond {
+      width: 100px;
+    }
+
+    .names {
+      font-size: 48px;
+
+      .and {
+        font-size: 24px;
+      }
+    }
+
+    .date {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+
+    .flowerBorder {
+      padding: 12px;
+
+      img {
+        width: 60px;
+      }
+
+      .brideLeter,
+      .groomLetter {
+        font-size: 20px;
+      }
+    }
+
+    .pinkBow,
+    .blueBow,
+    .pinkBowSecond,
+    .blueBowSecond {
+      width: 80px;
+    }
+
+    .names {
+      font-size: 36px;
+
+      .and {
+        font-size: 18px;
+      }
+    }
+
+    .date {
+      font-size: 16px;
+    }
+  }
 }

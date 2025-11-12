@@ -2,13 +2,13 @@ import styles from '../../styles/hero-section.module.scss';
 const HeroSection = () => {
   return (
     <div className={styles.container}>
-      <img src="/images/pink-bow.png" alt="Pink Bow" className={styles.pinkBow} />
-      <img src="/images/blue-bow.png" alt="Blue Bow" className={styles.blueBow} />
-      <img src="/images/blue-bow.png" alt="Blue Bow" className={styles.blueBowSecond} />
-      <img src="/images/pink-bow.png" alt="Pink Bow" className={styles.pinkBowSecond} />
+      <img src="/images/pink-bow.png" alt="Pink Bow" className={styles.pinkBow} loading='lazy' />
+      <img src="/images/blue-bow.png" alt="Blue Bow" className={styles.blueBow} loading='lazy' />
+      <img src="/images/blue-bow.png" alt="Blue Bow" className={styles.blueBowSecond} loading='lazy' />
+      <img src="/images/pink-bow.png" alt="Pink Bow" className={styles.pinkBowSecond} loading='lazy' />
 
       <div className={styles.flowerBorder}>
-        <img src="/images/tulip.png" alt='tulip' />
+        <img src="/images/tulip.png" alt='tulip' loading='lazy' />
         <span className={styles.brideLeter}>H</span>
         <span className={styles.groomLetter}>V</span>
       </div>

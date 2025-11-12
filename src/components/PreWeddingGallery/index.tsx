@@ -5,16 +5,16 @@ import { FaCameraRetro } from 'react-icons/fa'; // Một icon xinh xắn cho ti�
 // 1. Tạo một mảng chứa 10 ảnh của bạn
 // Hãy đảm bảo bạn thay thế các đường dẫn này
 const imagePaths = [
-  '/images/wedding-photos/TINN8991.jpg',
-  '/images/wedding-photos/TINN8834.jpg',
-  '/images/wedding-photos/TINN8766.jpg',
-  '/images/wedding-photos/TINN8861.jpg',
-  '/images/wedding-photos/TINN8926.jpg',
-  '/images/wedding-photos/TINN9151.jpg',
-  '/images/wedding-photos/TINN9084.jpg',
-  '/images/wedding-photos/TINN9218.jpg',
-  '/images/wedding-photos/TINN9251.jpg',
-  '/images/wedding-photos/TINN9262.jpg',
+  '/images/wedding-photos/TINN8991.webp',
+  '/images/wedding-photos/TINN8834.webp',
+  '/images/wedding-photos/TINN8861.webp',
+  '/images/wedding-photos/TINN8926.webp',
+  '/images/wedding-photos/TINN8766.webp',
+  '/images/wedding-photos/TINN9084.webp',
+  '/images/wedding-photos/TINN9151.webp',
+  '/images/wedding-photos/TINN9218.webp',
+  '/images/wedding-photos/TINN9251.webp',
+  '/images/wedding-photos/TINN9262.webp',
 ];
 
 

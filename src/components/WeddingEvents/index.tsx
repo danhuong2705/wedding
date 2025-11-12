@@ -55,20 +55,22 @@ const WeddingEventsNew: React.FC = () => {
             aria-label="View map to bride's home"
           >
             <img src="/images/location-icon.png" alt="Map Icon" className={styles.mapIcon}
-
+              loading='lazy'
             />
             <span>View Map</span>
           </a>
         </div>
         <div className={styles.imageContent}>
-          <img src={brideEvent.image} alt={brideEvent.imageAlt} className={styles.eventImage} />
+          <img src={brideEvent.image} alt={brideEvent.imageAlt} className={styles.eventImage}
+            loading='lazy'
+          />
         </div>
       </div>
 
       {/* --- BLOCK 2: GROOM'S HOME (Ảnh trái, thông tin phải) --- */}
       <div className={`${styles.eventBlock} ${styles.groomEventBlock}`}>
         <div className={styles.imageContent}>
-          <img src={groomEvent.image} alt={groomEvent.imageAlt} className={styles.eventImage} />
+          <img src={groomEvent.image} alt={groomEvent.imageAlt} className={styles.eventImage} loading='lazy' />
         </div>
         <div className={styles.infoContent}>
           <h3 className={styles.eventTitle}>{groomEvent.title}</h3>
@@ -88,7 +90,7 @@ const WeddingEventsNew: React.FC = () => {
             className={styles.mapButton}
             aria-label="View map to groom's home"
           >
-            <img src="/images/location-icon.png" alt="Map Icon" className={styles.mapIcon}
+            <img src="/images/location-icon.png" alt="Map Icon" className={styles.mapIcon} loading='lazy'
             />
             <span>View Map</span>
           </a>

@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useRef,useState } from 'react'; // Thêm useState, useEffect
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'; // Thêm useState, useEffect
 
 import styles from '../../styles/hot-air-balloon.module.scss';
 
@@ -74,11 +74,13 @@ const HotAirBalloon: React.FC<Props> = ({
           src={graphicUrl}
           alt=""
           className={styles.balloonGraphic}
+          loading='lazy'
         />
         <img
           src={milestone.imageUrl}
           alt={`Kỷ niệm năm ${milestone.year}`}
           className={styles.milestonePhoto}
+          loading="lazy"
         />
         <span className={styles.yearTag}>{milestone.year}</span>
       </div>

@@ -15,7 +15,7 @@ $simple-font: 'Montserrat', sans-serif;
   text-align: center;
   margin: 4rem auto;
   padding: 3rem 1.5rem;
-  max-width: 1100px;
+  max-width: 1200px;
   background-color: #fff;
   border-radius: 15px;
   min-height: 100vh;
@@ -150,7 +150,7 @@ $simple-font: 'Montserrat', sans-serif;
 
   &.activeAttending {
     background-color: $pink-color;
-    border-color: darken($pink-color, 5%);
+    border-color: var(--hover-pink-color);
     color: #fff;
     box-shadow: 0 2px 5px rgba($pink-color, 0.3);
   }

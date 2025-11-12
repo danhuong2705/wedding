@@ -145,7 +145,7 @@ const RsvpSection: React.FC = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="E.g., John Smith"
+                placeholder="E.g., Rosie Nguyen"
                 required
                 disabled={isSubmitting}
               />

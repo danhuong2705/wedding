@@ -132,7 +132,7 @@ const Guestbook: React.FC = () => {
             placeholder="Wishing you a lifetime of happiness..."
             rows={5}
             required
-            maxLength={500}
+            maxLength={1000}
             disabled={isSubmitting}
           />
         </div>

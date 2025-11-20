@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require('./next-i18next.config')
 const nextConfig = {
   eslint: {
     dirs: ['src'],
   },
-
+  i18n,
   reactStrictMode: true,
 
   // Uncoment to add domain whitelist

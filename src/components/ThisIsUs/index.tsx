@@ -1,7 +1,9 @@
 import styles from '../../styles/this-is-us.module.scss';
 import useDeviceDetect from '../../hooks/useDeviceDetect';
+import { useTranslation } from 'react-i18next';
 const ThisIsUs = () => {
   const { isMobile } = useDeviceDetect();
+  const { t } = useTranslation('common')
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

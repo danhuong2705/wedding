@@ -8,8 +8,11 @@ import 'aos/dist/aos.css';
 import '../styles/globals.scss';
 import '../styles/home.css';
 import { useEffect } from "react";
-
-export default function App({ Component, pageProps }: AppProps) {
+import useDeviceDetect from "@/hooks/useDeviceDetect";
+import { appWithTranslation } from 'next-i18next'
+import nextI18NextConfig from '../../next-i18next.config';
+const App = ({ Component, pageProps }: AppProps) => {
+  const { isDesktop } = useDeviceDetect();
   useEffect(() => {
     replaceCursor();
     AOS.init({ duration: 800, once: true });
@@ -153,3 +156,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </main>
   );
 }
+
+export default appWithTranslation(App, nextI18NextConfig)

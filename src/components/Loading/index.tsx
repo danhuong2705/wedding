@@ -5,6 +5,7 @@ interface LoadingProps {
   setLoading: (loading: boolean) => void;
 }
 const Loading = ({ setLoading }: LoadingProps) => {
+
   useEffect(() => {
     loading();
   }, []);
@@ -37,7 +38,8 @@ const Loading = ({ setLoading }: LoadingProps) => {
     function runProgress() {
       if (!path || !text) return;
 
-      const increment = 1; // Define increment value
+      const increment = // Random increment between 1 and 5 
+        Math.random() * 4 + 1;
       const offset = totalLength - (totalLength * currentPercent / 100);
 
       path.style.strokeDashoffset = offset.toString();
@@ -55,7 +57,7 @@ const Loading = ({ setLoading }: LoadingProps) => {
         return;
       }
 
-      const randomDelay = Math.random() * 100 + 10;
+      const randomDelay = Math.random() * 100 + 5;
       progressInterval = setTimeout(runProgress, randomDelay);
     }
 

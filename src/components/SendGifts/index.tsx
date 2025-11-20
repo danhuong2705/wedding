@@ -11,7 +11,7 @@ const SendGifts: React.FC = () => {
     name: 'Dắn Hương',
     bank: 'Techcombank',
     accountNumber: '2705199721',
-    accountName: 'DAN THI DAN HUONG',
+    accountName: 'DAN THI THU HUONG',
     qrCodeSrc: '/images/qr-huongdtt.jpeg', // Đảm bảo đường dẫn này đúng
   };
 

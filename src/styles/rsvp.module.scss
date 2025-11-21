@@ -123,6 +123,13 @@ $simple-font: 'Montserrat', sans-serif;
     background-size: 0.65em auto;
     padding-right: 2.5rem; // Chừa chỗ cho icon mũi tên
   }
+  .note {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-top: 1rem;
+    font-style: italic;
+    font-family: var(--elegant-font);
+  }
 }
 
 .attendanceButtons {

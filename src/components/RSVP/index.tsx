@@ -229,7 +229,11 @@ const RsvpSection: React.FC = () => {
                       required // <-- (Vẫn giữ)
                       disabled={isSubmitting}
                     />
+                    <div className={styles.note}>
+                      * Departure time and meeting point: 7:00 AM, Nov 30 at Gold Tower, 275 Nguyen Trai, Thanh Xuan, Ha Noi.
+                    </div>
                   </div>
+
                 )}
               </>
             )}

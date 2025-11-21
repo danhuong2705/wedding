@@ -118,7 +118,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet"></link>
         <title>Viên - Dắn Wedding</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="We're getting married! Welcome to the official wedding celebration site for Dắn Hương & Nguyễn Viên. Join us on November 30, 2025. All info here!" />

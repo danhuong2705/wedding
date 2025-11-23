@@ -59,6 +59,8 @@ const WeddingEventsNew: React.FC = () => {
             />
             <span>View Map</span>
           </a>
+          <div className={styles.note}>* For directions or if you cannot reach the bride, <br /> please contact: <a href='tel:0982208272'><strong>0982 208 272</strong></a> (Mr. Nam - Bride's Brother)</div>
+
         </div>
         <div className={styles.imageContent} data-aos="fade-left" data-aos-duration="1000">
           <img src={brideEvent.image} alt={brideEvent.imageAlt} className={styles.eventImage}

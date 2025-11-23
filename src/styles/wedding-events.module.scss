@@ -52,6 +52,12 @@ $simple-font: 'Montserrat', sans-serif;
     .eventTitle {
       color:var(--pink-color);
     }
+    .note {
+      font-style: italic;
+      margin-top: 1rem;
+      color: $darker-text;
+      
+    }
   }
   &.groomEventBlock {
     .infoContent {
